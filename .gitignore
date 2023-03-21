@@ -1,2 +1,5 @@
 # ignore log files
 logs/
+
+*..gitignore.un~
+*.gitignore~
