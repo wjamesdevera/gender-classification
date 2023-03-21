@@ -31,8 +31,8 @@ model = load_model('gender_classification_model.h5')
 def classify_gender(image_path):
     image = cv2.imread(image_path)
     image = cv2.resize(image, (256, 256))
-    yhat = model.predict(np.expand_dims(image/255, 0));
-    if yhat < 0.5:
+    prediction = model.predict(np.expand_dims(image/255, 0));
+    if prediction < 0.5:
         return 'female'
     else:
         return 'male'
